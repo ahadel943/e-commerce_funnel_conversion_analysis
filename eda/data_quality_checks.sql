@@ -1,6 +1,6 @@
+-- Evaluating the 'users' table
 
 -- Duplicates Check
--- users table duplicated rows check
 select 
 	user_id,
 	signup_date,
@@ -15,84 +15,17 @@ group by
 	acquisition_source
 having count(*) > 1; -- NO duplicated rows found
 
--- products table duplicated rows check
-select
-	product_id,
-	product_name,
-	category,
-	price,
-	count(*) as duplicates_count
-from raw.products
-group by 
-	product_id,
-	product_name,
-	category,
-	price
-having count(*) > 1; -- NO duplicated rows found
-
--- sessions table duplicated rows check
-select
-	session_id,
-	user_id,
-	session_start,
-	device_type,
-	traffic_source,
-	count(*) as duplicates_count
-from raw.sessions
-group by 
-	session_id,
-	user_id,
-	session_start,
-	device_type,
-	traffic_source
-having count(*) > 1; -- NO duplicated rows found
-
--- events table duplicated rows check
-select	
-	event_id,
-	session_id,
-	user_id,
-	product_id,
-	event_name,
-	event_time,
-	count(*) as duplicates_count
-from raw.events
-group by 
-	event_id,
-	session_id,
-	user_id,
-	product_id,
-	event_name,
-	event_time
-having count(*) > 1; -- ==>> DUPLICATED ROWS FOUND <<==
-
-with events_duplicates as (
-	select	
-	event_id,
-	session_id,
-	user_id,
-	product_id,
-	event_name,
-	event_time,
-	count(*) as duplicates_count
-from raw.events
-group by 
-	event_id,
-	session_id,
-	user_id,
-	product_id,
-	event_name,
-	event_time
-	having count(*) > 1
-)
-select
-	sum(duplicates_count) as total_duplicated_rows,
-	sum(duplicates_count - 1) as extra_rows_to_be_removed
-from events_duplicates; -- 25,678 total duplicated rows were found, 12,839 extra rows to be removed
+-- Missing Values Check
+select count(*) from raw.users where user_id is null;
+select count(*) from raw.users where signup_date is null;
+select count(*) from raw.users where country is null; -- 1,000 rows with missing 'country' value
+select count(*) from raw.users where acquisition_source is null;
 
 -- PK Uniqueness Check
-
--- Missing Values Check
+select 
+	count(*) as total_count,
+	count(distinct user_id) as uniq_user_ids -- user_id uniqueness confirmed
+from raw.users;
 
 -- Orphan Records Check
 
