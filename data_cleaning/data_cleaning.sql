@@ -20,7 +20,8 @@ select count(*) from analytics.users;
 select distinct country from analytics.users;
 select * from analytics.users limit 10;
 
--- loading 'products' data into the analytics.products table
+-- No data quality issues were found in the products table.
+-- Data transferred directly to analytics.products.
 insert into analytics.products
 select
 	product_id,
