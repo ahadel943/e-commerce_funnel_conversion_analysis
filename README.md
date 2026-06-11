@@ -46,14 +46,12 @@ The findings will help the business prioritize improvements that increase conver
 - Validated event sequence consistency.
 
 #### **Issues Found**
-| Issue | Result |
-|---------|---------|
-| Duplicate Event Rows | ... |
-| Missing Values | **1,000** null values were found in the '**users**' table |
-| Orphan Records | ... |
-| Invalid Event Sequences | ... |
+**Missing Values**
+- **1,000** null values were found in the '**country**' filed in the '**users**' table
+- **9,000** null values were found in the '**traffic_source**' field in the '**sessions**' table.
 
 ### **Data Cleaning Process**
-- Handled missing values in **users** table **country** field.
+- The missing values in the **country** field were replaced with '**Unknown**' to preserve user records while maintaining data completeness.
+- The missing **traffic source** values (**3% of sessions**) were replaced with '**Unknown**' to preserve session records and avoid **introducing bias** through imputation.
 
 ### **Exploratory Data Analysis (EDA)**

@@ -14,3 +14,15 @@ create table analytics.products (
 	category varchar(50),
 	price numeric(12, 2)
 );
+
+-- create 'sessions' table in the 'analytics' schema
+create table analytics.sessions (
+	session_id uuid primary key,
+	user_id uuid references analytics.users(user_id),
+	session_start timestamp not null,
+	device_type varchar(20) not null,
+	traffic_source varchar(50) not null
+);
+
+
+

@@ -34,4 +34,22 @@ from raw.products;
 select count(*) from analytics.products;
 select * from analytics.products limit 10;
 
+-- 'sessions' table 'traffic_source' missing values fix
+-- 9,000 missing traffic source values (3% of sessions) were replaced with 'Unknown'
+-- to preserve session records and avoid introducing bias through imputation.
+insert into analytics.sessions
+select
+	session_id,
+	user_id,
+	session_start,
+	device_type,
+	coalesce(traffic_source, 'Unknown') as traffic_source
+from raw.sessions;
+
+-- data validation
+select count(*) from analytics.sessions;
+select * from analytics.sessions limit 10;
+select distinct traffic_source from analytics.sessions;
+
+
 
