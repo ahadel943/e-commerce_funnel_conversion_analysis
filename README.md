@@ -48,13 +48,12 @@ The findings will help the business prioritize improvements that increase conver
 #### **Issues Found**
 | Issue | Result |
 |---------|---------|
-| Duplicate Event Rows | **12,839** extra rows identified in the '**events**' table|
+| Duplicate Event Rows | ... |
 | Missing Values | **1,000** null values were found in the '**users**' table |
 | Orphan Records | ... |
 | Invalid Event Sequences | ... |
 
 ### **Data Cleaning Process**
-- Removed 12,839 duplicate event records.
 - Handled missing values in **users** table **country** field.
 
 ### **Exploratory Data Analysis (EDA)**
