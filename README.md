@@ -55,8 +55,6 @@ The findings will help the business prioritize improvements that increase conver
 
 ### **Data Cleaning Process**
 - Removed 12,839 duplicate event records.
-- Handled missing values in traffic source fields.
-- Removed orphan records.
-- Validated funnel event order.
+- Handled missing values in **users** table **country** field.
 
 ### **Exploratory Data Analysis (EDA)**
