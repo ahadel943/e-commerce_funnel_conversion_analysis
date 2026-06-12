@@ -51,5 +51,48 @@ select count(*) from analytics.sessions;
 select * from analytics.sessions limit 10;
 select distinct traffic_source from analytics.sessions;
 
+-- transfering data to the events table in the analytics schema
+-- and removing the 12,839 extra duplicates rows
+-- and excluding the 6,567 orphan sessions
+insert into analytics.events 
+select
+	evs.event_id,
+  evs.session_id,
+  evs.user_id,
+  evs.product_id,
+  evs.event_name,
+  evs.event_time
+from (
+	select 
+		*,
+		row_number() over(
+			partition by event_id, session_id, user_id, product_id, event_name, event_time
+			order by ctid
+		) as rn
+	from raw.events
+) as evs
+inner join analytics.sessions as s
+on evs.session_id = s.session_id
+where rn = 1;
+
+/*
+ SQL Error [23505]: ERROR: duplicate key value violates unique constraint "events_pkey"
+  Detail: Key (event_id)=(1108a6b9-39b4-49a1-8ea9-0d81914095fb) already exists.
+
+Error position:*/
+
+delete from analytics.events;
+select * from analytics.events;
+
+
+
+
+
+
+
+
+
+
+
 
 

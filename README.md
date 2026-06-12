@@ -49,6 +49,8 @@ The findings will help the business prioritize improvements that increase conver
 **Missing Values**
 - **1,000** null values were found in the '**country**' filed in the '**users**' table
 - **9,000** null values were found in the '**traffic_source**' field in the '**sessions**' table.
+- Exact duplicate rows were identified in the **events** table, resulting in **12,839** extra rows to be removed, duplicates also caused primary key uniqueness violations in the event_id field.
+- - **6,567** orphan event records referencing non-existent sessions.
 
 ### **Data Cleaning Process**
 - The missing values in the **country** field were replaced with '**Unknown**' to preserve user records while maintaining data completeness.

@@ -24,5 +24,12 @@ create table analytics.sessions (
 	traffic_source varchar(50) not null
 );
 
-
-
+-- create 'events' table in the 'analytics' schema
+create table analytics.events (
+	event_id uuid primary key,
+	session_id uuid references analytics.sessions(session_id),
+	user_id uuid references analytics.users(user_id),
+	product_id uuid references analytics.products(product_id),
+	event_name varchar(50) not null,
+	event_time timestamp not null
+);
