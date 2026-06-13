@@ -37,7 +37,7 @@ The findings will help the business prioritize improvements that increase conver
 ## **Schema Design**
 **NO Schema Yet**
 
-## **Data Preparation and EDA**
+## **Data Preparation**
 ### **Data Quality Assessment**
 A comprehensive data quality assessment was performed before moving data from the **raw** layer to the **analytics** layerو The assessment focused on validating data completeness, uniqueness, referential integrity, and event consistency to ensure the dataset was reliable for funnel analysis.
 
