@@ -101,8 +101,8 @@ Indexes were created on frequently joined and filtered columns to improve analyt
 - The **users** table contains **50,000** users, the **products** table contains **500** products, the **sessions** table contains **500,000** sessions and the **events** table contains **1,300,369** events.
 
 ### **Geographic Distribution of Users**
-#### **Key Findings**
 ![users_count_by_country](./charts/1.users_count_by_country.png)
+#### **Key Findings**
 - The platform has a user base of **50,000** users distributed across **six** primary markets in the Middle East.
 - **Egypt** represents the largest user segment, accounting for **39.3%** of all registered users (**19,668 users**), making it the platform's dominant market.
 - **UAE** (**14.9%**) and **Saudi Arabia** (**14.7%**) contribute similar user volumes, forming the second-largest user groups after Egypt.
