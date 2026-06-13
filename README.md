@@ -98,4 +98,3 @@ The following cleaning and validation steps were applied before loading the data
 Indexes were created on frequently joined and filtered columns to improve analytical query performance, particularly for funnel stage calculations, session-level analysis, and event aggregation.
 
 ## **Exploratory Data Analysis (EDA)**
-
