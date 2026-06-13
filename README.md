@@ -35,7 +35,7 @@ The findings will help the business prioritize improvements that increase conver
 | products    | Product catalog containing category and pricing information for product performance analysis.                                               |
 
 ## **Schema Design**
-**NO Schema Yet**
+![erd](./schema/erd.png)
 
 ## **Data Preparation**
 ### **Data Quality Assessment**
