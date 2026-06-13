@@ -98,3 +98,17 @@ The following cleaning and validation steps were applied before loading the data
 Indexes were created on frequently joined and filtered columns to improve analytical query performance, particularly for funnel stage calculations, session-level analysis, and event aggregation.
 
 ## **Exploratory Data Analysis (EDA)**
+- The **users** table contains **50,000** users, the **products** table contains **500** products, the **sessions** table contains **500,000** sessions and the **events** table contains **1,300,369** events.
+
+### **Geographic Distribution of Users**
+#### **Key Findings**
+![users_count_by_country](./charts/1.users_count_by_country.png)
+- The platform has a user base of **50,000** users distributed across **six** primary markets in the Middle East.
+- **Egypt** represents the largest user segment, accounting for **39.3%** of all registered users (**19,668 users**), making it the platform's dominant market.
+- **UAE** (**14.9%**) and **Saudi Arabia** (**14.7%**) contribute similar user volumes, forming the second-largest user groups after Egypt.
+- **Qatar** (**9.8%**), **Kuwait** (**9.7%**), and **Jordan** (**9.6%**) show a relatively balanced distribution, indicating consistent market penetration across these countries.
+- **2%** of users have an **unknown** country due to missing values in the source data.
+#### **Business Interpretation**
+- User acquisition is highly concentrated in **Egypt**, suggesting that the platform's strongest market presence and brand awareness currently exist there.
+- While **Egypt** remains the primary growth driver, the relatively similar user shares across the **UAE**, **Saudi Arabia**, **Qatar**, **Kuwait**, and **Jordan** indicate an opportunity to expand regional penetration through targeted acquisition and retention initiatives.
+- Further analysis should determine whether user activity and conversion performance follow the same geographic pattern or if some markets generate disproportionately higher engagement and revenue despite having smaller user bases.
