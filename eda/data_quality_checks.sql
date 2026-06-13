@@ -182,12 +182,64 @@ from (
 	from raw.events
 ) as d; -- 19,571 duplicated event_id
 
-select
-	event_id,
-	count(*) as rows_count
+select event_id, count(*) as ids_count
 from raw.events
 group by event_id
+having count(*) > 1
+order by ids_count desc; -- event ids uniqueness violations confirmed
+
+-- there are duplicated event ids with 2 duplictate records and 3 duplictate records
+-- 120 event ids have 3 records with the same id, 19,331 event ids have 2 records with the id
+select count(data.event_id) as cnt, data.ids_count
+from (
+	select event_id, count(*) as ids_count
+	from raw.events
+	group by event_id
+	having count(*) > 1
+	order by ids_count desc
+) as data
+group by data.ids_count;
+
+select *
+from raw.events 
+where event_id = '7f1ec1e5-4de5-4c52-b849-000e2cf12ecd'; -- check
+
+select 
+	evs.event_id,
+	count(*) as ids_count
+from (
+	select *,
+	row_number() over(
+		partition by event_id, session_id, user_id, product_id, event_name, event_time
+		order by ctid
+	) as rn
+	from raw.events
+) as evs
+inner join analytics.sessions as s
+on evs.session_id = s.session_id
+where evs.rn = 1
+group by evs.event_id
 having count(*) > 1;
+
+-- duplicates sample check
+/*
+1.000def79-1627-4902-b0f2-2f386a798e89 => 2 rows, exact duplicates
+2.091066e6-7b11-45f5-9ef4-a9bdc68ceca8 => 2 rows, exact duplicates
+3.0d751912-f16c-4ac4-99cd-f614b795455d => 2 rows, exact duplicates
+4.12b66eeb-fa34-4e97-ba37-3e3def791e5e => 2 rows, exact duplicates
+5.2112edfc-087b-4cae-84e2-ed2dd1c3db19 => 2 rows, exact duplicates
+6.2f18f5bc-d161-48b9-8cdb-4f7c5f633cf0 => 2 rows, exact duplicates
+7.3501a5bd-c5f9-42ec-8760-03a9c77ade25 => 2 rows, NO exact duplicates, 
+																					event_name has 2 different values, product_view and purchase
+																					every other column has the same exact value which is ODD
+8.3e22457f-2cec-4f9b-846b-7368104ccb12 => 2 rows, NO exact duplicates,
+																				event_name has 2 different values, begin_checkout and product_view
+																				every other column has the same exact value 
+9.403a34c5-0391-4ef1-9d21-2f3ff8779efa => 3 rows, NO exact duplicates, 2 rows are exact match,
+																				1 rows has different session_id but every other column is exact match
+10.44cb5d02-77e1-4822-96b8-7586cb53d35b => 2 rows, exact duplicates
+*/
+select * from raw.events where event_id = '44cb5d02-77e1-4822-96b8-7586cb53d35b';
 
 -- Orphan Records Check
 
@@ -231,8 +283,12 @@ left join analytics.products as p
 on e.product_id = p.product_id 
 where p.product_id is null; -- NO orphan records by product_id
 
+-- Timestamp Assessment
+select min(event_time), max(event_time)
+from raw.events;
 
-
+select min(session_start), max(session_start)
+from raw.sessions;
 
 
 
