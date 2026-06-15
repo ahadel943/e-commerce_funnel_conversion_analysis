@@ -56,7 +56,33 @@ from analytics.users
 group by "year", "month", month_name
 order by "year", "month", month_name;
 
+-- sessions count by user
+select 
+	user_sessions_count,
+	count(user_id) as users_count
+from (
+	select 
+		user_id,
+		count(session_id) as user_sessions_count
+	from analytics.sessions
+	group by user_id
+) as sessions_stats
+group by user_sessions_count
+order by user_sessions_count;
 
+-- sessions summary stats by user count
+select 
+	min(user_sessions_count) as lowest_sessions_count,
+	max(user_sessions_count) as highest_sesions_count,
+	round(avg(user_sessions_count), 2) as avg_sesions_count,
+	percentile_cont(0.5) within group (order by user_sessions_count) as median_sessions_count 
+from (
+	select 
+		user_id,
+		count(session_id) as user_sessions_count
+	from analytics.sessions
+	group by user_id
+) as sessions_stats;
 
 
 

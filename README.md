@@ -138,3 +138,26 @@ Indexes were created on frequently joined and filtered columns to improve analyt
 - The absence of extreme peaks or troughs suggests relatively predictable acquisition performance, which can simplify forecasting and capacity planning.
 - While some months in **2025** show **lower** registrations than the same months in **2024**, the differences are relatively small and do not indicate a clear **downward** trend.
 - Additional analysis of acquisition channels and conversion performance would be required to determine whether these month-to-month variations reflect changes in marketing effectiveness or normal fluctuations in user demand.
+### **User Engagement and Session Distributio**
+![user_engagement_and_session_distribution](./charts/4.user_engagement_and_session_distribution.png)
+#### **Key Findings**
+- Users generated between **1** and **19** sessions during the analysis period.
+- The **average** number of sessions per user was **6.01** sessions.
+- The **median** number of sessions per user was **6** sessions.
+- The close alignment between the **mean** and **median** suggests that session activity is relatively balanced and not heavily influenced by a small group of extremely active users.
+#### **Business Interpretation**
+- The typical user interacts with the platform approximately **six times** during the two-year period.
+- User engagement appears to be broadly distributed across the user base rather than concentrated among a small number of highly active users.
+- The similarity between the **average** and **median** session counts indicates that the platform does not rely heavily on a few power users to drive overall activity.
+- This pattern suggests a relatively healthy engagement distribution, where user activity is spread across a large portion of the customer base.
+
+
+
+
+
+
+
+
+
+
+
