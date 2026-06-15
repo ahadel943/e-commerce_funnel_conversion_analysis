@@ -29,6 +29,16 @@ from analytics.users
 group by country
 order by users_count desc;
 
+-- users by acquisition_source
+select 
+	acquisition_source,
+	count(user_id) as users_count,
+	sum(count(*)) over() as total_users_count,
+	round(count(user_id) / sum(count(*)) over(), 2) as perc
+from analytics.users
+group by acquisition_source
+order by users_count desc;
+
 
 
 

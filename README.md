@@ -112,3 +112,16 @@ Indexes were created on frequently joined and filtered columns to improve analyt
 - User acquisition is highly concentrated in **Egypt**, suggesting that the platform's strongest market presence and brand awareness currently exist there.
 - While **Egypt** remains the primary growth driver, the relatively similar user shares across the **UAE**, **Saudi Arabia**, **Qatar**, **Kuwait**, and **Jordan** indicate an opportunity to expand regional penetration through targeted acquisition and retention initiatives.
 - Further analysis should determine whether user activity and conversion performance follow the same geographic pattern or if some markets generate disproportionately higher engagement and revenue despite having smaller user bases.
+### **Users Distribution by Acquisition Source**
+![users_count_by_acquisition_source](./charts/2.users_count_by_acquisition_source.png)
+#### **Key Findings**
+- **Google** is the largest acquisition channel, contributing **30%** of all users (**14,996** users).
+- **Facebook** is the second-largest acquisition source, accounting for **25%** of users (**12,457** users).
+- Together, **Google** and **Facebook** contribute **55%** of the total user base, making them the primary acquisition drivers.
+- **Organic** traffic represents **20%** of users, indicating a meaningful level of non-paid user acquisition.
+- **Direct** traffic contributes **15%** of users.
+- **Email** is the smallest acquisition source, accounting for **10%** of users.
+#### **Business Interpretation**
+- User acquisition appears to be heavily driven by marketing channels, particularly **Google** and **Facebook**, which together account for more than half of all registered users.
+- The platform maintains a healthy mix of acquisition channels, with **Organic** and **Direct** traffic contributing **35%** of users, reducing complete dependence on paid acquisition.
+- While **Email** contributes the smallest share of users, its effectiveness cannot be evaluated based on acquisition volume alone, Further analysis is required to determine whether email-acquired users demonstrate stronger engagement, retention, or conversion behavior than users acquired through other channels.
