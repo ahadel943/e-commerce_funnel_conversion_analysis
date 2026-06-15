@@ -163,6 +163,18 @@ Indexes were created on frequently joined and filtered columns to improve analyt
 - Mobile users not only represent the majority of sessions but also return more frequently than Desktop users.
 - The typical **Mobile** user generates approximately **4** sessions, compared to only **2** sessions for the typical **Desktop** user.
 - These findings suggest that the mobile experience plays a critical role in overall platform engagement and should be a primary focus area when evaluating funnel performance and conversion optimization.
-
-
-
+### **Sessions Volume by Traffic Source**
+![sessions_volume_by_traffic_source](./charts/6.sessions_volume_by_traffic_source.png)
+#### **Key Findings**
+- **Google** is the largest traffic source, generating **29%** of all sessions (**87,182** sessions).
+- **Facebook** is the second-largest traffic source, contributing **24%** of total sessions (**72,479** sessions).
+- Together, **Google** and **Facebook** account for **53%** of all platform sessions, making them the primary traffic drivers.
+- **Organic** traffic contributes **19%** of sessions, representing a substantial share of user activity generated through **non-paid** channels.
+- **Direct** traffic accounts for **15%** of sessions, indicating a meaningful level of direct user engagement with the platform.
+- **Email** generates **10%** of sessions, making it the smallest identified traffic source.
+- **3%** of sessions have an **unknown** traffic source due to missing values in the original dataset.
+#### **Business Interpretation**
+- The platform relies heavily on **Google** and **Facebook** as its primary traffic acquisition channels, with more than half of all user sessions originating from these sources.
+- Despite the dominance of **paid** and **campaign-driven** channels, **Organic** and **Direct** traffic collectively generate 34% of sessions, suggesting that the platform benefits from existing brand awareness and non-paid user acquisition.
+- The relatively strong contribution from **Organic** traffic may indicate effective discoverability and ongoing user interest beyond paid marketing efforts.
+- Further analysis is required to determine whether the channels generating the most traffic also produce the highest levels of engagement and conversion throughout the funnel.
