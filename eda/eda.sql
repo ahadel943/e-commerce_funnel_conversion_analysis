@@ -81,13 +81,34 @@ from (
 		user_id,
 		count(session_id) as user_sessions_count
 	from analytics.sessions
-	group by user_id
+	group by user_id	
 ) as sessions_stats;
 
+-- sessions count by device type
+select
+	device_type,
+	count(session_id) as sessions_count,
+	sum(count(session_id)) over() as total_sessions_count,
+	round(count(session_id) / sum(count(session_id)) over(), 2) as perc
+from analytics.sessions
+group by device_type;
 
-
-
-
+-- sessions stats by device type
+select 
+	sessions_stats.device_type,
+	min(sessions_stats.user_sessions_count) as lowest_sessions_count,
+	max(sessions_stats.user_sessions_count) as highest_sesions_count,
+	round(avg(sessions_stats.user_sessions_count), 2) as avg_sesions_count,
+	percentile_cont(0.5) within group (order by sessions_stats.user_sessions_count) as median_sessions_count
+from (
+	select 
+		user_id,
+		device_type,
+		count(session_id) as user_sessions_count
+	from analytics.sessions
+	group by user_id, device_type
+) as sessions_stats
+group by sessions_stats.device_type;
 
 
 

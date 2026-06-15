@@ -150,14 +150,19 @@ Indexes were created on frequently joined and filtered columns to improve analyt
 - User engagement appears to be broadly distributed across the user base rather than concentrated among a small number of highly active users.
 - The similarity between the **average** and **median** session counts indicates that the platform does not rely heavily on a few power users to drive overall activity.
 - This pattern suggests a relatively healthy engagement distribution, where user activity is spread across a large portion of the customer base.
-
-
-
-
-
-
-
-
+### **User Engagement and Session Distribution by Device Type**
+![user_engagement_and_ession_distribution_by_device_type](./charts/5.user_engagement_and_ession_distribution_by_device_type.png)
+#### **Key Findings**
+- **Mobile** devices account for **65%** of all sessions (**194,961** sessions), making them the **dominant** platform used by customers.
+- **Desktop** devices account for **35%** of sessions (**105,039** sessions).
+- **Mobile** users generate an average of **3.98** sessions per user with a median of **4** sessions.
+- **Desktop** users generate an average of **2.40** sessions per user with a median of **2** sessions.
+- The highest observed engagement was also higher on **Mobile** (**15** sessions) compared to **Desktop** (**10** sessions).
+#### **Business Interpretation**
+- User activity is heavily concentrated on **Mobile** devices, both in terms of traffic volume and engagement frequency.
+- Mobile users not only represent the majority of sessions but also return more frequently than Desktop users.
+- The typical **Mobile** user generates approximately **4** sessions, compared to only **2** sessions for the typical **Desktop** user.
+- These findings suggest that the mobile experience plays a critical role in overall platform engagement and should be a primary focus area when evaluating funnel performance and conversion optimization.
 
 
 
