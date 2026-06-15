@@ -138,7 +138,7 @@ Indexes were created on frequently joined and filtered columns to improve analyt
 - The absence of extreme peaks or troughs suggests relatively predictable acquisition performance, which can simplify forecasting and capacity planning.
 - While some months in **2025** show **lower** registrations than the same months in **2024**, the differences are relatively small and do not indicate a clear **downward** trend.
 - Additional analysis of acquisition channels and conversion performance would be required to determine whether these month-to-month variations reflect changes in marketing effectiveness or normal fluctuations in user demand.
-### **User Engagement and Session Distributio**
+### **User Engagement and Session Distribution**
 ![user_engagement_and_session_distribution](./charts/4.user_engagement_and_session_distribution.png)
 #### **Key Findings**
 - Users generated between **1** and **19** sessions during the analysis period.
