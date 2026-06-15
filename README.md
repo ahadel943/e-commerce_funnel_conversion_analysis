@@ -125,3 +125,16 @@ Indexes were created on frequently joined and filtered columns to improve analyt
 - User acquisition appears to be heavily driven by marketing channels, particularly **Google** and **Facebook**, which together account for more than half of all registered users.
 - The platform maintains a healthy mix of acquisition channels, with **Organic** and **Direct** traffic contributing **35%** of users, reducing complete dependence on paid acquisition.
 - While **Email** contributes the smallest share of users, its effectiveness cannot be evaluated based on acquisition volume alone, Further analysis is required to determine whether email-acquired users demonstrate stronger engagement, retention, or conversion behavior than users acquired through other channels.
+### **Users Signup Trend**
+![users_trend_trend](./charts//3.users_trend_trend.png)
+#### **Key Findings**
+- User registrations remained relatively stable throughout the analysis period (**January 2024** – **December 2025**).
+- Monthly registrations ranged between **1,876** users (**February 2025**) and **2,193** users (**August 2025**).
+- No significant spikes or sudden drops were observed, indicating a consistent user acquisition pattern over time.
+- Registration volumes in most months remained close to the overall monthly average, suggesting stable acquisition performance across the two-year period.
+- Comparing the same months across years reveals slight **year-over-year** fluctuations, with some months in **2025** experiencing **lower** registrations than their **2024** counterparts.
+#### **Business Interpretation**
+- The platform appears to maintain a steady user acquisition engine without excessive dependence on seasonal campaigns or one-time growth events.
+- The absence of extreme peaks or troughs suggests relatively predictable acquisition performance, which can simplify forecasting and capacity planning.
+- While some months in **2025** show **lower** registrations than the same months in **2024**, the differences are relatively small and do not indicate a clear **downward** trend.
+- Additional analysis of acquisition channels and conversion performance would be required to determine whether these month-to-month variations reflect changes in marketing effectiveness or normal fluctuations in user demand.
