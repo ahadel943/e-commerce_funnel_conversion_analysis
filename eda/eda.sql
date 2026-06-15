@@ -40,6 +40,21 @@ group by acquisition_source
 order by users_count desc;
 
 
+-- timeframe check
+select
+	min(signup_date)as signup_perid_start, -- 2024-01-01 00:10:36.000
+	max(signup_date) as signup_period_end -- 2025-12-30 23:41:28.000
+from analytics.users;
+
+-- users signup trend
+select
+	extract(year from signup_date) as "year",
+	extract(month from signup_date) as "month",
+	to_char(signup_date, 'Mon') as month_name,
+	count(user_id) as users_count
+from analytics.users
+group by "year", "month", month_name
+order by "year", "month", month_name;
 
 
 
@@ -51,10 +66,9 @@ order by users_count desc;
 
 
 
-select * from analytics.products limit 10;
-select category, count(product_id) as products_count
-from analytics.products
-group by category;
+
+
+
 
 
 
