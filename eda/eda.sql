@@ -120,24 +120,6 @@ from analytics.sessions
 group by traffic_source
 order by sessions_count desc;
 
-select 
-	sessions_stats.traffic_source,
-	min(sessions_stats.user_sessions_count) as lowest_sessions_count,
-	max(sessions_stats.user_sessions_count) as highest_sesions_count,
-	round(avg(sessions_stats.user_sessions_count), 2) as avg_sesions_count,
-	percentile_cont(0.5) within group (order by sessions_stats.user_sessions_count) as median_sessions_count
-from (
-	select 
-		user_id,
-		traffic_source,
-		count(session_id) as user_sessions_count
-	from analytics.sessions
-	group by user_id, traffic_source
-) as sessions_stats
-group by sessions_stats.traffic_source;
-
-
-
 
 
 
