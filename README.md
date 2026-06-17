@@ -219,3 +219,21 @@ Indexes were created on frequently joined and filtered columns to improve analyt
 - User drop-off becomes more pronounced during the checkout process, suggesting that purchase completion represents the primary conversion challenge.
 - More than half of the user base completed at least one purchase, indicating a relatively healthy long-term customer conversion rate.
 - Because users can generate multiple sessions over time, user-level participation should not be interpreted as funnel conversion. A session-based funnel analysis is required to accurately measure stage-to-stage conversion rates and identify where shopping sessions are being lost.
+
+## **Analysis Unit**
+**The funnel analysis was conducted at the session level, using session_id as the primary unit of analysis.**
+
+**This approach was chosen because the dataset captures user interactions as event sequences occurring within individual sessions. The funnel stages (product_view → add_to_cart → begin_checkout → purchase) represent actions that can occur during a single visit to the platform, making the session the most appropriate level for measuring progression through the funnel.**
+
+**While user-level analysis is also possible, a single user may generate multiple sessions with different outcomes. Measuring conversion at the user level could therefore combine multiple journeys into one observation and obscure where drop-offs occur. Using sessions allows each shopping journey to be evaluated independently, providing a more accurate view of funnel performance and stage-to-stage conversion behavior.**
+
+## **Key Business Questions**
+- **1. What is the overall funnel conversion rate?**
+- **2. How does conversion perform at each stage of the funnel?**
+- **3. Where is the largest drop-off occurring in the funnel?**
+- **4. How many users and sessions reach each funnel stage?**
+- **5. How does funnel conversion differ by device type?**
+- **6. How does funnel conversion differ by traffic source?**
+- **7. How does funnel conversion vary across countries?**
+- **8. Which product categories generate the highest purchase conversion rates?**
+- **9. How does product price influence conversion behavior?**
