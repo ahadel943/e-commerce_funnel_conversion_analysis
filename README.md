@@ -178,7 +178,7 @@ Indexes were created on frequently joined and filtered columns to improve analyt
 - Despite the dominance of **paid** and **campaign-driven** channels, **Organic** and **Direct** traffic collectively generate 34% of sessions, suggesting that the platform benefits from existing brand awareness and non-paid user acquisition.
 - The relatively strong contribution from **Organic** traffic may indicate effective discoverability and ongoing user interest beyond paid marketing efforts.
 - Further analysis is required to determine whether the channels generating the most traffic also produce the highest levels of engagement and conversion throughout the funnel.
-### **Sessions Volume by Traffic Source**
+### **Events Volume Sanity Check**
 ![events_volume_sanity_check](./charts/7.events_volume_sanity_check.png)
 #### **Key Findings**
 - The dataset contains **896,610 product view events**, representing the largest volume of activity in the customer journey.
