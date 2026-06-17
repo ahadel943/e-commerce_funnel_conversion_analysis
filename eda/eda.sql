@@ -120,16 +120,28 @@ from analytics.sessions
 group by traffic_source
 order by sessions_count desc;
 
--- events table 
+-- events distribution by event_name
+select
+	event_name,
+	count(event_name) as events_count
+from analytics.events
+group by event_name
+order by events_count desc;
+
+-- sessions count by event_name
 select 
 	event_name,
-	count(session_id) as sessions_count
+	count(distinct session_id) as sessions_count
 from analytics.events
 group by event_name
 order by sessions_count desc;
 
-
-
-
+-- users count by event_name
+select
+	event_name,
+	count(distinct user_id) as users_count
+from analytics.events
+group by event_name
+order by users_count desc;
 
 

@@ -206,3 +206,16 @@ Indexes were created on frequently joined and filtered columns to improve analyt
 - Additional **drop-offs** occur between **Add to Cart** and **Begin Checkout**, indicating potential friction before users commit to the checkout process.
 - The continued decline toward **Purchase** highlights that only a subset of shopping sessions ultimately convert into completed transactions.
 - The consistent stage-to-stage reduction confirms that the dataset follows a logical funnel structure and is suitable for **session-based conversion analysis**.
+### **Unique Users Distribution by Funnel Stage**
+![unique_users_distribution_by_funnel_stage](./charts/9.unique_users_distribution_by_funnel_stage.png)
+#### **Key Findings**
+- Nearly all users (**49,882** out of **50,000**) reached the **Product View** stage at least once during the analysis period.
+- **48,656 users** progressed to **Add to Cart**, indicating that most users who viewed products eventually expressed purchase intent.
+- **39,224** users reached **Begin Checkout**, while **28,206 users** completed at least one purchase.
+- Event participation decreases consistently across funnel stages, following the expected customer journey.
+- Approximately **56% of users completed at least one purchase** during the two-year observation period.
+#### **Business Interpretation**
+- Product discovery and initial purchase intent appear strong, as the majority of users progressed from product viewing to adding items to their carts.
+- User drop-off becomes more pronounced during the checkout process, suggesting that purchase completion represents the primary conversion challenge.
+- More than half of the user base completed at least one purchase, indicating a relatively healthy long-term customer conversion rate.
+- Because users can generate multiple sessions over time, user-level participation should not be interpreted as funnel conversion. A session-based funnel analysis is required to accurately measure stage-to-stage conversion rates and identify where shopping sessions are being lost.
