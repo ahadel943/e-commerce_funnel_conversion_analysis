@@ -178,3 +178,17 @@ Indexes were created on frequently joined and filtered columns to improve analyt
 - Despite the dominance of **paid** and **campaign-driven** channels, **Organic** and **Direct** traffic collectively generate 34% of sessions, suggesting that the platform benefits from existing brand awareness and non-paid user acquisition.
 - The relatively strong contribution from **Organic** traffic may indicate effective discoverability and ongoing user interest beyond paid marketing efforts.
 - Further analysis is required to determine whether the channels generating the most traffic also produce the highest levels of engagement and conversion throughout the funnel.
+### **Sessions Volume by Traffic Source**
+![events_volume_sanity_check](./charts/7.events_volume_sanity_check.png)
+#### **Key Findings**
+- The dataset contains **896,610 product view events**, representing the largest volume of activity in the customer journey.
+- **265,702 add-to-cart** events were recorded, indicating that only a subset of product views progressed to purchase intent.
+- **92,314 begin checkout events** were generated, showing a substantial reduction in user activity between cart creation and checkout initiation.
+- The funnel ends with **45,743 purchase events**, representing the smallest event volume in the customer journey.
+- Event counts decrease consistently across all funnel stages (**Product View** → **Add to Cart** → **Begin Checkout** → **Purchase**), following the expected customer purchase flow.
+#### **Business Interpretation**
+- User activity declines at every stage of the purchasing journey, indicating the presence of natural conversion **drop-offs** throughout the funnel.
+- **Product views** generate the **highest** level of engagement, but a **significant** portion of users do not progress to adding products to their carts.
+- Additional user loss occurs between the **cart** and **checkout** stages, suggesting potential friction points before purchase completion.
+- The consistent decrease in event volumes across stages indicates that the event data follows a logical purchase journey and is suitable for funnel conversion analysis.
+- These results provide an initial view of customer behavior, however, event counts alone do not measure conversion performance. Session-level funnel analysis is required to quantify conversion rates and identify the stages with the largest drop-offs.

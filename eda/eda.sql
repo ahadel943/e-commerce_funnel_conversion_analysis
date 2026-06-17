@@ -120,6 +120,14 @@ from analytics.sessions
 group by traffic_source
 order by sessions_count desc;
 
+-- events table 
+select 
+	event_name,
+	count(session_id) as sessions_count
+from analytics.events
+group by event_name
+order by sessions_count desc;
+
 
 
 
