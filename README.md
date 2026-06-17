@@ -193,7 +193,7 @@ Indexes were created on frequently joined and filtered columns to improve analyt
 - The consistent decrease in event volumes across stages indicates that the event data follows a logical purchase journey and is suitable for funnel conversion analysis.
 - These results provide an initial view of customer behavior, however, event counts alone do not measure conversion performance. Session-level funnel analysis is required to quantify conversion rates and identify the stages with the largest drop-offs.
 ### **Sessions Distribution by Funnel Stage**
-![sessions_distribution_by_funnel_stage](./charts/8.sessions_distribution_by_dunnel_stage.png)
+![sessions_distribution_by_funnel_stage](./charts/8.sessions_distribution_by_funnel_stage.png)
 #### **Key Findings**
 - **299,795** sessions reached the **Product View** stage, making it the most common stage in the customer journey.
 - **180,298** sessions progressed to **Add to Cart**, indicating a substantial reduction from the initial product-view stage.
