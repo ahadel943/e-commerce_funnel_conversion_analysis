@@ -192,3 +192,17 @@ Indexes were created on frequently joined and filtered columns to improve analyt
 - Additional user loss occurs between the **cart** and **checkout** stages, suggesting potential friction points before purchase completion.
 - The consistent decrease in event volumes across stages indicates that the event data follows a logical purchase journey and is suitable for funnel conversion analysis.
 - These results provide an initial view of customer behavior, however, event counts alone do not measure conversion performance. Session-level funnel analysis is required to quantify conversion rates and identify the stages with the largest drop-offs.
+### **Sessions Distribution by Funnel Stage**
+![sessions_distribution_by_funnel_stage](./charts/8.sessions_distribution_by_dunnel_stage.png)
+#### **Key Findings**
+- **299,795** sessions reached the **Product View** stage, making it the most common stage in the customer journey.
+- **180,298** sessions progressed to **Add to Cart**, indicating a substantial reduction from the initial product-view stage.
+- **77,186** sessions reached **Begin Checkout**, showing a significant drop between cart creation and checkout initiation.
+- **41,563** sessions completed a **Purchase**, representing the smallest share of sessions in the funnel.
+- The number of sessions decreases consistently across all stages (**Product View** → **Add to Cart** → **Begin Checkout** → **Purchase**), following the expected progression of an e-commerce purchasing journey.
+#### **Business Interpretation**
+- The majority of shopping sessions begin with product browsing, but only a portion of those sessions progress to later stages of the funnel.
+- A noticeable decline occurs between **Product View** and **Add to Cart**, suggesting that many users browse products without expressing purchase intent.
+- Additional **drop-offs** occur between **Add to Cart** and **Begin Checkout**, indicating potential friction before users commit to the checkout process.
+- The continued decline toward **Purchase** highlights that only a subset of shopping sessions ultimately convert into completed transactions.
+- The consistent stage-to-stage reduction confirms that the dataset follows a logical funnel structure and is suitable for **session-based conversion analysis**.
