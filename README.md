@@ -237,3 +237,18 @@ Indexes were created on frequently joined and filtered columns to improve analyt
 - **7. How does funnel conversion vary across countries?**
 - **8. Which product categories generate the highest purchase conversion rates?**
 - **9. How does product price influence conversion behavior?**
+
+## **Analysis**
+### **1. What is the overall funnel conversion rate?**
+![sessions_conversion_funnel](./charts/10.sessions_conversion_funnel.png)
+#### **Key Insights**
+- **299,795** sessions entered the funnel through the **Product View** stage, representing the starting point of the customer journey.
+- **180,298** sessions progressed to **Add to Cart**, resulting in a **60.14%** Survival Rate from the initial stage.
+- **77,186** sessions reached the **Begin Checkout** stage, corresponding to a **25.75%** Survival Rate from Product View.
+- **41,563** sessions completed a **purchase**, producing an Overall Funnel Conversion Rate of **13.86%**.
+- The cumulative decline in session counts across the funnel indicates progressive user **drop-off** as customers move toward completing a purchase.
+#### **Business Interpretation**
+- Approximately **4 out of every 10 sessions** exited the funnel before adding a product to the cart, While this represents the first major reduction in funnel volume, additional analysis is required to determine whether the drop-off is driven by product attractiveness, pricing, user experience, or expected customer behavior.
+- Only about **one quarter** of sessions that viewed a product progressed to the checkout stage, indicating substantial cumulative abandonment before users initiated the payment process.
+- The platform achieved an **Overall Conversion Rate of 13.86%**, meaning that roughly **14 out of every 100** product-view sessions resulted in a completed purchase, This provides an initial indication of funnel performance but does not identify where the most significant conversion losses occur.
+- Since survival rates measure cumulative progression from the first funnel stage, they do not reveal the efficiency of transitions between consecutive stages, Therefore, the next step is to analyze Stage-to-Stage Conversion Rates to accurately identify the funnel stage with the highest user drop-off.
