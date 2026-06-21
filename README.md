@@ -32,7 +32,7 @@ The findings will help the business prioritize improvements that increase conver
 | users       | Customer-level information including signup date, country, and acquisition  source.                                                 |
 | sessions    | Session-level records capturing user visits, traffic channels, and device information.                                            |
 | events      | Event-level behavioral data tracking customer actions across the conversion funnel.                                                 |
-| products    | Product catalog containing category and pricing information for product performance analysis.                                               |
+| products    | Product catalog containing category and pricing information for product performance analysis.                                   |
 
 ## **Schema Design**
 ![erd](./schema/erd.png)
@@ -277,3 +277,21 @@ Indexes were created on frequently joined and filtered columns to improve analyt
 - **Desktop** users demonstrate substantially stronger conversion behavior throughout the funnel, suggesting a smoother purchasing experience or higher purchase intent.
 - Since **Mobile** contributes the majority of customer sessions, even modest improvements in **Mobile** funnel performance could have a meaningful impact on overall revenue.
 ---
+### **4. How does funnel performance differ by traffic source?**
+| Traffic Source | Product View | Add to Cart | Checkout | Purchase | Overall CR% | 
+| -------------- | ------------ | ----------- | -------- | -------- | ----------- |
+| **Google**     |  87,131      | 52,083      | 22,425   | 13,103   | **15.04%**  |
+| **Unknown**    |  8,991       | 5,365       | 2,294    | 1,342    | **14.93%**  |
+| **Email**      |  29,148      | 17,611      | 7,477    | 4,344    | **14.90%**  |
+| **Oraganic**   |  58,159      | 35,142      | 14,801   | 8,596    | **14.78%**  |
+| **Facebook**   |  72,430      | 43,520      | 18,759   | 7,426    | **10.25%**  |
+| **Direct**     |  43,936      | 26,577      | 11,430   | 6,752    | **15.37%**  |
+#### **Key Insights**
+- **Google** generated the highest volume of funnel sessions across all stages, followed by **Facebook** and **Organic**, consistent with the traffic distribution observed during the EDA.
+- Overall conversion performance remained remarkably consistent across most traffic sources, with conversion rates ranging between **14.78%** and **15.37%**.
+- **Direct** achieved the **highest** Overall Conversion Rate (**15.37%**), although the advantage over **Google**, **Email**, **Organic**, and **Unknown** was relatively small.
+- **Facebook** was the only traffic source that noticeably underperformed, recording an Overall Conversion Rate of **10.25%**, substantially below all other acquisition channels.
+#### **Business Interpretation**
+- The analysis suggests that most traffic sources generate users with similar purchase behavior once they enter the funnel, Differences in traffic volume do not necessarily translate into meaningful differences in conversion efficiency.
+- While **Direct** produced the **highest** conversion rate, the margin over other high-performing channels is relatively small, indicating no single traffic source clearly dominates funnel performance.
+- **Facebook** stands out as the only channel with significantly weaker conversion performance, This may indicate differences in user intent, campaign targeting, or the quality of traffic acquired through this source. Further investigation into Facebook campaigns and audience segments would be valuable to understand the cause of this lower conversion rate.
