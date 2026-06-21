@@ -230,13 +230,11 @@ Indexes were created on frequently joined and filtered columns to improve analyt
 ## **Key Business Questions**
 - **1. What is the overall funnel conversion rate?**
 - **2. How does conversion perform at each stage of the funnel?**
-- **3. Where is the largest drop-off occurring in the funnel?**
-- **4. How many users and sessions reach each funnel stage?**
-- **5. How does funnel conversion differ by device type?**
-- **6. How does funnel conversion differ by traffic source?**
-- **7. How does funnel conversion vary across countries?**
-- **8. Which product categories generate the highest purchase conversion rates?**
-- **9. How does product price influence conversion behavior?**
+- **3. How does funnel performance differ by device type?**
+- **4. How does funnel performance differ by traffic source?**
+- **5. How does funnel performance differ by country?**
+- **6. Which product categories have the highest and lowest conversion rates?**
+- **7. Which acquisition sources generate the highest-value sessions?**
 
 ## **Analysis**
 ### **1. What is the overall funnel conversion rate?**
@@ -265,3 +263,17 @@ Indexes were created on frequently joined and filtered columns to improve analyt
 - The most significant conversion **loss** occurred between **Add to Cart** and **Begin Checkout**, where fewer than half of cart sessions advanced to the checkout process, This stage represents the primary opportunity for further investigation and optimization.
 - Once users entered the checkout process, more than half successfully completed a purchase, suggesting that the checkout experience retains a relatively large proportion of engaged customers.
 - Since the largest drop-off occurs before checkout begins, future analysis should focus on understanding why users abandon their carts before initiating the payment process. Potential areas for investigation include pricing, shipping costs, account requirements, or other sources of friction prior to checkout.
+---
+### **3. How does funnel performance differ by device type?**
+![funnel_performance_by_device_type](./charts/12.funnel_performance_by_device_type.png)
+#### **Key Insights**
+- **Mobile** generated the majority of funnel activity, accounting for substantially more product views and cart additions than Desktop.
+- Despite attracting more sessions, **Mobile** achieved an **Overall Conversion Rate** of only **8.80%**, compared with **23.26%** on **Desktop**.
+- The largest performance gap appears after the **Add to Cart** stage, where relatively fewer **Mobile** sessions progressed to **Begin Checkout**.
+- **Desktop** consistently retained a higher proportion of sessions throughout the purchasing journey, resulting in a significantly stronger overall conversion performance.
+#### **Business Interpretation**
+- Although **Mobile** drives most customer traffic, its ability to convert sessions into completed purchases is considerably weaker than **Desktop**, This suggests that higher traffic alone does not translate into stronger business outcomes.
+- The sharp decline between **Add to Cart** and **Begin Checkout** on **Mobile** indicates that this transition deserves further investigation, Potential areas to examine include mobile usability, checkout accessibility, page performance, or other sources of friction that may discourage users from initiating checkout.
+- **Desktop** users demonstrate substantially stronger conversion behavior throughout the funnel, suggesting a smoother purchasing experience or higher purchase intent.
+- Since **Mobile** contributes the majority of customer sessions, even modest improvements in **Mobile** funnel performance could have a meaningful impact on overall revenue.
+---
