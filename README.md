@@ -252,3 +252,16 @@ Indexes were created on frequently joined and filtered columns to improve analyt
 - Only about **one quarter** of sessions that viewed a product progressed to the checkout stage, indicating substantial cumulative abandonment before users initiated the payment process.
 - The platform achieved an **Overall Conversion Rate of 13.86%**, meaning that roughly **14 out of every 100** product-view sessions resulted in a completed purchase, This provides an initial indication of funnel performance but does not identify where the most significant conversion losses occur.
 - Since survival rates measure cumulative progression from the first funnel stage, they do not reveal the efficiency of transitions between consecutive stages, Therefore, the next step is to analyze Stage-to-Stage Conversion Rates to accurately identify the funnel stage with the highest user drop-off.
+---
+### **2. How does conversion perform at each stage of the funnel?**
+![stage_to_stage_conversion_rate](./charts/11.stage_to_stage_conversion_rate.png)
+#### **Key Insights**
+- **60.14%** of sessions progressed from **Product View** to **Add to Cart**.
+- The conversion rate decreased to **42.81%** between **Add to Cart** and **Begin Checkout**, representing the lowest conversion rate across all funnel transitions.
+- **53.85%** of sessions that reached **Begin Checkout** completed a purchase.
+- The transition from **Add to Cart** to **Begin Checkout** experienced the highest stage-specific drop-off, with **57.19%** of sessions failing to continue.
+#### **Business Interpretation**
+- A majority of product-view sessions progressed to the **Add to Cart** stage, indicating that many visitors showed initial purchase intent after viewing a product.
+- The most significant conversion **loss** occurred between **Add to Cart** and **Begin Checkout**, where fewer than half of cart sessions advanced to the checkout process, This stage represents the primary opportunity for further investigation and optimization.
+- Once users entered the checkout process, more than half successfully completed a purchase, suggesting that the checkout experience retains a relatively large proportion of engaged customers.
+- Since the largest drop-off occurs before checkout begins, future analysis should focus on understanding why users abandon their carts before initiating the payment process. Potential areas for investigation include pricing, shipping costs, account requirements, or other sources of friction prior to checkout.
