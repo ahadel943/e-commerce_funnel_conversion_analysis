@@ -297,7 +297,7 @@ Indexes were created on frequently joined and filtered columns to improve analyt
 - **Facebook** stands out as the only channel with significantly weaker conversion performance, This may indicate differences in user intent, campaign targeting, or the quality of traffic acquired through this source. Further investigation into Facebook campaigns and audience segments would be valuable to understand the cause of this lower conversion rate.
 ---
 ### **5. How does funnel performance differ by country?**
-| Traffic Source | Product View | Add to Cart | Checkout | Purchase | Overall CR% |
+| Country        | Product View | Add to Cart | Checkout | Purchase | Overall CR% |
 | -------------- | ------------ | ----------- | -------- | -------- | ----------- |
 | **Unknown**    |  6,025       | 3,681       | 1,602    | 849      | **14.09%**  |
 | **َQatar**      |  29,463      | 17,606      | 7,484    | 4,141    | **14.05%**  |
@@ -315,3 +315,17 @@ Indexes were created on frequently joined and filtered columns to improve analyt
 - Geographic location does not appear to be a major driver of funnel performance in the current dataset. The purchasing journey remains consistently efficient across all represented markets.
 - Since conversion behavior is broadly similar across countries, optimization efforts are likely to produce greater business impact if focused on other dimensions such as **device type** or **traffic source** where larger performance gaps were observed.
 - Although the **Unknown** segment shows the highest conversion rate, it represents a small portion of the data and should primarily be viewed as a reminder of the importance of maintaining high data quality rather than as evidence of superior market performance.
+---
+### **6. Which product categories have the highest and lowest conversion rates?**
+- **Unlike the previous analyses, this question uses the session–product pair as the unit of analysis because a single session may contain interactions with multiple products across different categories.**
+
+![conversion_rate_by_product_category](./charts/13.conversion_rate_by_product_category.png)
+#### **Key Insights**
+- **Electronics** achieved the highest Overall Conversion Rate at **5.34%**.
+- **Luxury** recorded the lowest Overall Conversion Rate at **3.22%**, substantially below all other product categories.
+- **Fashion**, **Beauty**, **Home**, and **Electronics** exhibited highly consistent conversion performance, with conversion rates ranging from **5.21%** to **5.34%**.
+- **Luxury** is the only category that significantly deviates from the overall pattern, indicating weaker progression from product views to completed purchases.
+#### **Business Interpretation**
+- Conversion performance is generally stable across most product categories, suggesting a consistent purchasing experience regardless of category.
+- The **Luxury** category stands out as a clear underperformer, converting approximately **40%** less efficiently than the leading categories (**3.22% vs. ~5.3%**), This may indicate higher customer hesitation, stronger price sensitivity, longer purchase decision cycles, or category-specific friction.
+- Since the remaining categories exhibit very similar conversion rates, optimization efforts should prioritize understanding and improving the **Luxury** purchasing journey, where the greatest opportunity for improvement appears to exist.
