@@ -234,7 +234,7 @@ Indexes were created on frequently joined and filtered columns to improve analyt
 - **4. How does funnel performance differ by traffic source?**
 - **5. How does funnel performance differ by country?**
 - **6. Which product categories have the highest and lowest conversion rates?**
-- **7. Which acquisition sources generate the highest-value sessions?**
+- **7. Which acquisition sources generate the highest estimated revenue?**
 
 ## **Analysis**
 ### **1. What is the overall funnel conversion rate?**
@@ -278,14 +278,14 @@ Indexes were created on frequently joined and filtered columns to improve analyt
 - Since **Mobile** contributes the majority of customer sessions, even modest improvements in **Mobile** funnel performance could have a meaningful impact on overall revenue.
 ---
 ### **4. How does funnel performance differ by traffic source?**
-| Traffic Source | Product View | Add to Cart | Checkout | Purchase | Overall CR% | 
+| Traffic Source | Product View | Add to Cart | Checkout | Purchase | Overall CR% |
 | -------------- | ------------ | ----------- | -------- | -------- | ----------- |
+| **Direct**     |  43,936      | 26,577      | 11,430   | 6,752    | **15.37%**  |
 | **Google**     |  87,131      | 52,083      | 22,425   | 13,103   | **15.04%**  |
 | **Unknown**    |  8,991       | 5,365       | 2,294    | 1,342    | **14.93%**  |
 | **Email**      |  29,148      | 17,611      | 7,477    | 4,344    | **14.90%**  |
 | **Oraganic**   |  58,159      | 35,142      | 14,801   | 8,596    | **14.78%**  |
 | **Facebook**   |  72,430      | 43,520      | 18,759   | 7,426    | **10.25%**  |
-| **Direct**     |  43,936      | 26,577      | 11,430   | 6,752    | **15.37%**  |
 #### **Key Insights**
 - **Google** generated the highest volume of funnel sessions across all stages, followed by **Facebook** and **Organic**, consistent with the traffic distribution observed during the EDA.
 - Overall conversion performance remained remarkably consistent across most traffic sources, with conversion rates ranging between **14.78%** and **15.37%**.
@@ -295,3 +295,23 @@ Indexes were created on frequently joined and filtered columns to improve analyt
 - The analysis suggests that most traffic sources generate users with similar purchase behavior once they enter the funnel, Differences in traffic volume do not necessarily translate into meaningful differences in conversion efficiency.
 - While **Direct** produced the **highest** conversion rate, the margin over other high-performing channels is relatively small, indicating no single traffic source clearly dominates funnel performance.
 - **Facebook** stands out as the only channel with significantly weaker conversion performance, This may indicate differences in user intent, campaign targeting, or the quality of traffic acquired through this source. Further investigation into Facebook campaigns and audience segments would be valuable to understand the cause of this lower conversion rate.
+---
+### **5. How does funnel performance differ by country?**
+| Traffic Source | Product View | Add to Cart | Checkout | Purchase | Overall CR% |
+| -------------- | ------------ | ----------- | -------- | -------- | ----------- |
+| **Unknown**    |  6,025       | 3,681       | 1,602    | 849      | **14.09%**  |
+| **َQatar**      |  29,463      | 17,606      | 7,484    | 4,141    | **14.05%**  |
+| **Saudi Arabia** |  44,021    | 26,610      | 11,402   | 6,152    | **13.98%**  |
+| **Kuwait**     |  29,338      | 17,438      | 7,478    | 4,072    | **13.88%**  |
+| **UAE**        |  44,286      | 26,670      | 11,367   | 6,122    | **13.82%**  |
+| **Jordan**     |  29,033      | 17,462      | 7,406    | 4,010    | **13.81%**  |
+| **Egypt**      |  117,629     | 70,831      | 30,447   | 16,217   | **13.79%**  |
+#### **Key Insights**
+- Overall funnel performance is highly consistent across all countries, with conversion rates ranging from **13.79%** to **14.09%**.
+- Egypt contributes the largest funnel volume at every stage, reflecting its position as the platform's largest user base.
+- No country demonstrates a materially higher or lower conversion rate, suggesting that users progress through the purchasing funnel at similar rates regardless of geography.
+- The **Unknown** country segment recorded the highest conversion rate (**14.09%**), but the difference is marginal and should not be interpreted as a meaningful performance advantage.
+#### **Business Interpretation**
+- Geographic location does not appear to be a major driver of funnel performance in the current dataset. The purchasing journey remains consistently efficient across all represented markets.
+- Since conversion behavior is broadly similar across countries, optimization efforts are likely to produce greater business impact if focused on other dimensions such as **device type** or **traffic source** where larger performance gaps were observed.
+- Although the **Unknown** segment shows the highest conversion rate, it represents a small portion of the data and should primarily be viewed as a reminder of the importance of maintaining high data quality rather than as evidence of superior market performance.
