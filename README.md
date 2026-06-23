@@ -24,7 +24,15 @@ To address this challenge, the analysis focuses on:
 The findings will help the business prioritize improvements that increase conversion rates and maximize revenue from existing website traffic.
 
 ## **Executive Summary**
-**NO Summary Yet**
+This project analyzes customer behavior across an e-commerce conversion funnel using two years of event-level data. The analysis follows the complete customer journey from **Product View to Purchase**, with the objective of identifying where users abandon the purchasing process and uncovering opportunities to improve conversion performance.
+
+Before conducting the analysis, a comprehensive data quality assessment was performed to identify and resolve issues including missing values, duplicate records, primary key violations, orphan records, and event-sequence inconsistencies. A clean analytical dataset was then prepared to ensure reliable business insights.
+
+Using the **session** as the primary unit of analysis, the project evaluated overall funnel performance and compared conversion rates across devices, acquisition channels, geographic markets, and product categories.
+
+The analysis found that the funnel achieved an Overall Session Conversion Rate of **13.86%**, while the largest user **drop-off** occurred between the **Add to Cart and Begin Checkout** stages. Device-level analysis identified **mobile users** as the primary source of conversion loss despite generating the majority of platform traffic. Product-level analysis also revealed that the **Luxury** category significantly underperformed compared with all other categories. In contrast, conversion performance remained relatively consistent across **countries** and **acquisition sources**, suggesting that current growth opportunities lie primarily in optimizing the purchasing experience rather than acquiring additional traffic.
+
+The findings of this project provide actionable recommendations for improving funnel efficiency, reducing customer abandonment, and increasing conversion performance through targeted product and user experience optimizations.
 
 ## **Dataset Description**
 | Table       | Description                             |
