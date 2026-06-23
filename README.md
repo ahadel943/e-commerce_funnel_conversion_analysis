@@ -329,3 +329,63 @@ Indexes were created on frequently joined and filtered columns to improve analyt
 - Conversion performance is generally stable across most product categories, suggesting a consistent purchasing experience regardless of category.
 - The **Luxury** category stands out as a clear underperformer, converting approximately **40%** less efficiently than the leading categories (**3.22% vs. ~5.3%**), This may indicate higher customer hesitation, stronger price sensitivity, longer purchase decision cycles, or category-specific friction.
 - Since the remaining categories exhibit very similar conversion rates, optimization efforts should prioritize understanding and improving the **Luxury** purchasing journey, where the greatest opportunity for improvement appears to exist.
+---
+### **7. Which acquisition sources generate the highest estimated revenue?**
+| Acquisition Source | Purchase Count | Estimated Revenue | Purchasing Users | Avg Estimated Revenue per User | Avg Estimated Revenue per Purchase | 
+| ------------------ | -------------- | ----------------- | ---------------- | ------------------------------ | ---------------------------------- |
+| **Google**         |  13,888        | 6,256,788         | 8,518            | 734                            | 451                                |
+| **Facebook**       |  11,352        | 5,233,987         | 6,985            | 749                            | 461                                |
+| **Organic**        |  8,996         | 4,031,829         | 5,620            | 717                            | 448                                |
+| **Direct**         |  6,793         | 3,154,667         | 4,199            | 751                            | 464                                |
+| **Email**          |  4,714         | 2,106,017         | 2,884            | 730                            | 447                                |
+#### **Key Insights**
+- **Google** is the leading acquisition source in terms of volume, generating **13,888** purchases and the highest estimated revenue (**$6.25M**).
+- **Facebook** follows closely in both purchase volume and revenue, contributing **$5.23M** in estimated revenue.
+- Despite differences in volume, Average Revenue per User (ARPU) is relatively stable across all acquisition sources, ranging from approximately **$717** to **$751**, indicating consistent user value regardless of acquisition channel.
+- **Direct** traffic generates the highest value per purchase (**$464**), suggesting stronger purchase intent or higher value product selection among users arriving directly.
+- **Organic** traffic shows the lowest ARPU (**$717**) and lowest purchase value per transaction, but still maintains solid volume, making it an **efficient but lower value** channel.
+#### **Business Interpretation**
+- Acquisition sources primarily differ in **scale (volume)** rather than **quality (user value)**, as ARPU is relatively stable across all channels.
+- **Google and Facebook dominate revenue contribution**, driven mainly by higher traffic volume rather than significantly higher per user value.
+- The consistency in ARPU suggests that once users enter the funnel and convert, their purchasing behavior is relatively uniform across acquisition channels.
+- **Direct traffic stands out with the highest value per purchase**, which may indicate:
+    - Higher intent users (returning customers or brand-aware users).
+    - Faster decision making behavior.
+- Since revenue differences are mainly volume driven, optimization efforts should focus on:
+    - Scaling high volume channels (**Google**, **Facebook**).
+    - Improving conversion efficiency in mid volume channels (**Organic**, **Email**).
+
+## **Conclusion**
+This analysis examined the complete e-commerce conversion funnel, tracking customer journeys from product views to completed purchases using the **session** as the primary unit of analysis. After performing a comprehensive data quality assessment and cleaning process, the analysis focused on identifying conversion performance, funnel bottlenecks, and behavioral differences across key customer segments.
+
+The overall funnel achieved a **13.86%** session conversion rate, indicating that approximately one in seven sessions that viewed a product ultimately resulted in a purchase. While the initial transition from **Product View to Add to Cart** performed relatively **well**, the largest funnel loss occurred between the **Add to Cart and Begin Checkout** stages, identifying this transition as the primary opportunity for conversion improvement.
+
+Segment-level analysis revealed that **device type** had the strongest impact on conversion performance. Although mobile devices generated the majority of platform traffic, they converted substantially worse than desktop sessions, suggesting potential usability or checkout friction on mobile devices.
+
+Across traffic sources and countries, conversion performance remained remarkably consistent, indicating that acquisition channels and geographic markets contribute similar quality traffic. Revenue differences across acquisition sources were primarily driven by traffic volume rather than higher customer value per user.
+
+Product level analysis showed generally stable conversion rates across most categories, with **Luxury** products standing out as a clear **underperformer**. This suggests that category specific purchasing behavior, pricing sensitivity, or customer decision complexity may be limiting conversion performance.
+
+Overall, the analysis indicates that the platform's primary growth opportunities are not in acquiring additional traffic alone, but in improving funnel efficiency, particularly by **reducing checkout abandonment on mobile devices** and optimizing the purchasing journey for **Luxury** products. Addressing these bottlenecks has the potential to increase conversions without requiring additional customer acquisition investment.
+
+## **Recommendations**
+- **Optimize the mobile purchasing experience**, particularly the transition from **Add to Cart to Begin Checkout**. Given that mobile accounts for the majority of sessions but exhibits substantially lower conversion performance than desktop, further investigation into mobile usability, page performance, checkout flow, and payment experience is recommended.
+- **Investigate the Luxury product category** to understand the causes of its significantly lower conversion rate. Additional analysis of pricing strategy, product presentation, customer reviews, shipping policies, and purchase behavior may help identify barriers to conversion.
+- **Analyze the Add to Cart → Checkout transition** in greater detail. As this stage represents the largest funnel **drop-off**, future analysis should examine checkout friction, cart abandonment patterns, and potential UX issues to identify optimization opportunities.
+- **Continue improving data quality** by reducing records with **Unknown** country and traffic source values. Although these represent a relatively small proportion of the data, improving attribute completeness will enable more reliable segmentation and marketing analysis.
+- **Expand future analysis beyond the conversion funnel**. Incorporating customer retention, cohort analysis, repeat purchase behavior, and customer lifetime value (LTV) would provide a more comprehensive understanding of long term customer performance and business growth.
+
+## Tools Used
+- **PostgreSQL**
+    - Used as the primary database management system (DBMS) for querying, aggregating, and analyzing transactional data.
+- **DBeaver**
+    - Used as the SQL client for writing and executing queries, and exploring database tables in an interactive environment.
+- **Microsoft Excel**
+    - Used for quick data validation, exploratory charts, and supporting visual analysis during EDA.
+- **Microsoft PowerPoint**
+    - Used for creating final visualizations and presenting key insights in a structured business-friendly format.
+- **Visual Studio Code (VS Code)**
+    - Used for organizing SQL scripts, building the project structure, and maintaining documentation (README and analysis files).
+
+
+
